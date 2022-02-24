@@ -1,0 +1,77 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Lineare DGL 1. Ordnung}
+    \vspace{0.5em}
+    \mathbox%[$\quad q(x) \vcentcolon=$ Störfunktion]
+    {
+        y' + p(x) \cdot y = q(x)
+    }
+    $\triangleright$ $q(x) \vcentcolon=$ Störfunktion
+    
+    \subsubsection{Homogen}
+        \vspace{0.5em}
+        \mathbox{
+            y' + p(x) \cdot y = 0
+        }
+        $\triangleright$ Immer separierbar. (\ref{sec:separierbareDGL})
+
+    \subsubsection{Inhomogen}\label{sec:1.Ord-homogen}
+        \vspace{0.5em}
+        \mathbox{
+            y' + p(x) \cdot y = q(x)
+        }
+        \begin{enumerate}
+            \item $q(x) = 0$ setzen, homogene Lösung $y_h$ finden
+            % $y_h' + p(x) \cdot y_h = 0$
+            \item Partikuläre Lösung $y_p$ finden:
+            \begin{itemize}
+                \item Ansatz von Tabelle %(\ref{sec:linh-1orderTabelle})
+                \item Lagrange-Methode %(\ref{sec:linh-1orderLagrange})
+            \end{itemize}
+        \end{enumerate}
+
+    \subsubsubsection{Ansatz}
+            \begin{enumerate}
+                \item Ansatz für $y_p$ in inhomogene DGL einsetzen
+                \item Koeffizientenvergleich
+                \item $y = y_h + y_p$
+            \end{enumerate}
+            \begin{center}
+                \renewcommand{\arraystretch}{1.25}
+                \begin{tabular}{ll}
+                    \hline
+                    Störfunktion $q(x)$                                                                                                                       & Ansatz für $y_p(x)$                          \\ \hline\hline
+                    Konstante                                                                                                                                 & $y_p = A$                                    \\
+                    lineare Fkt.                                                                                                                              & $y_p = Ax + B$                               \\
+                    Polynom Grad $n$                                                                                                                          & $y_p = Ax^n + Bx^{n-1} + \cdots$             \\
+                    \begin{tabular}[c]{@{}l@{}}$A \sin(\omega x), A \cos( \omega x),$ \phantom{dirtl} \\ $A \sin(\omega x) + B \cos( \omega x)$\end{tabular} & $y_p = C \sin(\omega x) + D \cos( \omega x)$  \\
+                    $A e^{{\color{blue}b}x}$                                                                                                                  & $y_p = B e^{{\color{blue}b}x}$               \\\hline
+                \end{tabular}
+            \end{center} 
+                \vspace{0.5em}
+                \textit{Falls der Ansatz nicht funktioniert:
+                \begin{itemize}
+                    \item Konstante Koeffizienten: mit $x$ multiplizieren
+                    \item bei Euler-DGL: mit $ln(x)$ multiplizieren
+                \end{itemize}
+                }
+                
+        \subsubsubsection{Lagrange-Methode}
+            
+        %%
+        %  \begin{enumerate}
+        %        \item Lagrange-Ansatz $y_p$:\ $y_h = C \cdots \to y_p = C(x) \cdots$
+        %        \item Ansatz in inhomogene DGL einsetzen
+        %        \item Nach $C'(x)$ auflösen und integrieren
+        %        \item $C(x)$ in $y_p$ einsetzen
+        %        \item $y = y_p$
+        %    \end{enumerate}
+        %%
+        
+            \begin{enumerate}
+                \item Ausgangsgleichung: $y' = f(X)y + g(x) $
+                \item $y_h$ wie gewohnt berechnen ($g(x) := 0$)
+                \item $y_p = y_h \cdot \int \frac{g(x)}{y_h}  \,dx $
+                \item $y= y_h + y_p$
+            \end{enumerate} 
+        \vspace{1pt}
+        

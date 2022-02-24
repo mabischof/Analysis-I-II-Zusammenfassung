@@ -1,0 +1,70 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Eigenschaften \texorpdfstring{\hfill S.54}{S.54}}
+    Eine Funktion $f : A \to B$ ist eine Vorschrift, die jedem $x \in A$ ein Element $f(x) \in B$ zuordnet, $f: x \to f(x)$.
+    \begin{description}
+        \item[Definitionsbereich:] $D(f) = A$
+        \item[Zielbereich:] $Z(f) = B$
+        \item[Wertebereich:] $W(f) = \{ f(x) \vert \ x \in D(f)\}$   
+    \end{description}
+    
+    \textit{Hinweis: Lücken im Defintionsbereich müssen bei der Diskussion der Stetigkeit nicht betrachtet werden.\\ Bsp:}
+    \small{$$ f(x) = \frac{1}{x} \hspace{8pt} \textrm{ist in} \hspace{8pt} \mathbb{R} \setminus \{-1, 1 \} \hspace{8pt} \textrm{stetig}$$}
+    
+    \subsubsubsection{Surjektiv}\vspace{3pt}
+    
+        Jeder Wert im Zielbereich $Z(f)$ wird angenommen.
+        
+        \mathbox{
+            W(f) = Z(f)
+        }
+    \begin{samepage}
+         \subsubsubsection{Injektiv}\vspace{3pt}
+        Jede Horizontale schneidet den Graphen $\Gamma(f)$ höchstens einmal.
+        \begin{itemize}
+            \item $f(x_1) = f(x_2) \Rightarrow x_1 = x_2$, sonst nicht injektiv
+        \end{itemize}
+    \end{samepage}
+        
+    \subsubsubsection{Bijektiv}\vspace{3pt}
+    
+        \begin{center}
+            Injektiv \& Surjektiv $\Leftrightarrow$ Bijektiv $\Leftrightarrow$ Umkehrbar
+        \end{center}
+    \subsubsubsection{Inverse Funktion}\vspace{3pt}
+    
+        Sei $f(x)$ eine Funktion von $D(f)$ nach $W(f)$, dann ist $f^{-1}: W(f) \to D(f)$ mit $y \mapsto f^{-1}(y)$ die inverse Funktion von $f(x)$.
+        \begin{itemize}
+            \item $W(f^{-1}) = D(f)$
+            \item $D(f^{-1}) = W(f)$
+        \end{itemize}
+    \subsubsubsection{Gerade \& Ungerade}%\vspace{3pt}
+        \begin{description}
+            \item[gerade:]\phantom{as} $f(-x) = f(x)$ 
+            \item[ungerade:] $f(-x) = -f(x)$ 
+        \end{description}
+    \subsubsubsection{Stetigkeit}\vspace{3pt}
+    
+        $f(x)$ ist stetig im Punkt $\xi$ falls
+        $$
+            \lim_{x\to\xi^-} f(x) = f(\xi) = \lim_{x\to\xi^+} f(x).
+        $$
+        \begin{itemize}
+            \item Bei Lücken in $D(f)$ werden die einzelnen Abschnitte separat betrachtet.
+        \end{itemize}
+        
+    \subsubsubsection{Monotonie}\vspace{3pt}
+    
+        \textbf{(Strikt) Monoton Steigend}
+            \begin{itemize}
+                \item $x_1 < x_2\ \Longleftrightarrow\ f(x_1) \leq f(x_2)$ \hfill (strikt: $<$)
+                \item $f'(x) \geq 0$ \hfill (strikt: $>$)
+            \end{itemize}
+        \textbf{(Strikt) Monoton Fallend}
+            \begin{itemize}
+                \item $x_1 < x_2\ \Longleftrightarrow\ f(x_1) \geq f(x_2)$ \hfill (strikt: $>$)
+                \item $f'(x) \leq 0$ \hfill (strikt: $<$)
+            \end{itemize}
+    \subsubsubsection{Beschränktheit}\vspace{3pt}
+    
+        Alle Funktionswerte sind in einem endlich breiten waagerechten Parallelstreifen enthalten.
+

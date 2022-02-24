@@ -1,0 +1,26 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Lagrange-Methode 2. Ordnung}\label{sec:Lagrange-2-Ordnung}
+    \begin{enumerate}
+        \item DGL auf folgende Form bringen:
+            $$
+                y'' + p_0(x) y' + p_1(x)y = q(x)
+            $$
+        \item Homogene Lösung
+            $$
+                y_h =\, C_1\,y_1(x) + C_2\,y_2(x)
+            $$
+        \item $C_1(x), C_2(x)$ bestimmen
+            \begin{align*}
+                C_1(x) &= - \int \frac{q(x) y_2(x)}{W(x)} dx\\[0.25em]
+                C_2(x) &= \phantom{-}\int \frac{q(x) y_1(x)}{W(x)} dx
+            \end{align*}
+            \vspace{0.5em}
+            $$
+                W(x) = y_1y_2' - y_1'y_2 \qquad q(x) = \textrm{Störterm}
+            $$
+        \item Allgemeine Lösung
+            \mathbox{
+                y =\, C_1(x)\,y_1(x) + C_2(x)\,y_2(x)
+            }
+        
+    \end{enumerate}

@@ -1,0 +1,53 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Flächenparametrisierungen}
+Gängige Tricks falls die Fläche gegeben ist als:
+    \begin{enumerate}
+        \item $z = f(x,y)$
+            $$
+                \vec{r}(x,y) = \begin{pmatrix}
+                    x\\y\\f(x,y)
+                \end{pmatrix}
+            $$
+        \item $z = f(r,\varphi)$
+            $$
+                \vec{r}(r,\varphi) = \begin{pmatrix}
+                    r\cos(\varphi)\\r\sin(\varphi)\\f(r,\varphi)
+                \end{pmatrix}
+            $$
+        \item Rotationssymmetrische Fläche
+            $$
+                \vec{r}(t,\varphi) = \begin{bmatrix}
+                    \mathrm{Rotations-}\\\mathrm{matrix}\\(\varphi)
+                \end{bmatrix}
+                \cdot
+                \begin{pmatrix}
+                    \mathrm{Param.}\\
+                    \mathrm{Kurve}\\
+                    \mathrm{(t)}
+                \end{pmatrix}.
+            $$
+    \end{enumerate}
+    \subsubsection{Rotationsmatrizen}
+        \vspace{-1em}
+        $$
+        s_\varphi \vcentcolon= \sin(\varphi) \qquad c_\varphi \vcentcolon= \cos(\varphi)
+        $$
+        $$
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & c_\varphi &-s_\varphi\\
+            0 & s_\varphi & c_\varphi
+        \end{bmatrix}_x
+        \quad
+        \begin{bmatrix}
+            c_\varphi &0 & s_\varphi\\
+            0 & 1 & 0\\
+            -s_\varphi & 0 & c_\varphi
+        \end{bmatrix}_y
+        \quad\!
+        \begin{bmatrix}
+            c_\varphi &-s_\varphi& 0\\
+            s_\varphi & c_\varphi& 0\\
+            0 & 0 & 1
+        \end{bmatrix}_z
+        $$

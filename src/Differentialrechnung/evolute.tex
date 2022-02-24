@@ -1,0 +1,23 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Evolute \texorpdfstring{\hfill S.66}{S.66}}
+    Parametrisierung der Krümmungsmittelpunkte an die Kurve $\rvec = (x(t), y(t))^T$.
+    $$
+        E(t) = 
+        \begin{pmatrix}
+            x_E(t)\\y_E(t)
+        \end{pmatrix}
+    $$
+    \begin{align*}
+        x_E(t) &= x - \frac{\dyt \left( \dxt^2 + \dyt^2 \right)}{\dxt \ddyt - \ddxt \dyt}\\[0.25em]
+        y_E(t) &= y + \frac{\dxt \left( \dxt^2 + \dyt^2 \right)}{\dxt \ddyt - \ddxt \dyt}
+    \end{align*}\vspace{3pt}
+    
+    Ortsvektor $\Vec{r}_M(t_o)$ des Krümmungsmittelpunkt mit gegebener Krümmung $k(t)$ \textit{$\rightarrow$ 2.2} und Normalenvektor $\Vec{n}(t_o)$ der Kurve an der Stelle $t_o$:
+    
+    $$ \Vec{r}_M(t_o) = \Vec{r}_o - \frac{\Vec{n}(t_o)}{|\Vec{n}(t_o)|} \cdot k(t) $$
+    
+    \vspace{3pt}
+    
+    mit $\Vec{n}(t_o) = \begin{pmatrix}
+        \Dot{y}(t_o) \\ -\Dot{x}(t_o) 
+    \end{pmatrix}$

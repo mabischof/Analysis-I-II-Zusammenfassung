@@ -1,0 +1,27 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Allgemein} \vskip3pt
+    \textbf{Gradient} \hfill $ f(x,y,z) \rightarrow \vec{v}(x,y,z)$
+    $$
+     \grad(f(u,v,w)) = \begin{pmatrix}
+         f_u \\ f_v \\ f_w \end{pmatrix}
+    $$
+    \textbf{Divergenz} (Quellstärke) \hfill $\vec{v} \rightarrow f(x,y,z)$
+        $$
+            \mathrm{\div}(\vec{v}) = \nabla \cdot \vec{v} = u_x + v_y + w_z
+        $$
+    \textbf{Rotation} (Wirbelstärke) \hfill $\vec{v} \rightarrow \vec{w}$
+        $$
+            \mathrm{rot}(\vec{v}) = \nabla \times \vec{v} = 
+            \begin{pmatrix}
+                w_y - v_z\\ u_z - w_x\\v_x - u_y
+            \end{pmatrix}
+        $$
+    \subsubsection{Identitäten}
+        \vspace{-1em}
+        \begin{align*}
+            \div(\vvec) = 0 & \Longleftrightarrow \textrm{quellenfrei}\\
+            \rot(\vvec) = 0 & \Longleftrightarrow\textrm{wirbelfrei} \\
+            \div(\rot(\vvec)) = 0 & \\
+            \rot(\grad(f)) = 0 & \\
+        \end{align*} 
+        $$\div(\grad(f)) = f_{xx} + f{yy} + f_{zz} = \Delta = \textrm{Laplace Operator}$$

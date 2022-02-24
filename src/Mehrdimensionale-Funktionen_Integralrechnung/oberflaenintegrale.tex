@@ -1,0 +1,23 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Oberflächenintegrale}
+    Spezialfall eines Flächenintegrals.\\    
+    Flächeninhalt einer parametr. Oberfläche berechnen:
+    \mathbox{
+        \iint_{\mathcal{O}} d\mathcal{O} = \iint_{\mathcal{O}} \abs*{\vec{r}_u \times \vec{r}_v} du dv
+    }
+    \textbf{Parametrisierung der Oberfläche:}
+    $$
+        \vec{r} = \begin{pmatrix}
+            x(u,v)\\
+            y(u,v)\\
+            z(u,v)
+        \end{pmatrix}
+    $$
+    \begin{description}
+        \item[Oberflächenelement:] $d\mathcal{O} = \abs*{\vec{r}_u \times \vec{r}_v} du dv$
+        \item[Normalenvektor:]  $\vec{n} = \vec{r}_u \times \vec{r}_v$
+        \item[Normaleneinheitsvektor:]  $\vec{n}_o = \frac{\vec{r}_u \times \vec{r}_v}{\abs*{\vec{r}_u \times \vec{r}_v}}$
+    \end{description}
+    {\small Oberflächenelement entspricht Jacobi-Determinante.} \vskip2mm
+    \textit{Hinweis: ist die Fläche $F(x,y,z(x,y))$ gegeben, so lässt sich das Kreuzporudkt umgehen, wenn wir
+    den Betrag des Gradienten nehmen. $\to$ \ref{sec:Gradient}} Achtung Korrketurfaktor! 

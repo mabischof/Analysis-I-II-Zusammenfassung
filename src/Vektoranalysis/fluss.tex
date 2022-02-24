@@ -1,0 +1,18 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Fluss \texorpdfstring{\hfill $\Phi$}{Phi}}
+    \vspace{-1em}
+    \begin{align*}
+        \Phi &= \iint_A \vvec \cdot \novec \ dA &\textrm{Allgemein}\\
+        \Phi &= \iint_A \vvec(\rvec(u,v)) \cdot (\rvec_u \times \rvec_v) \ du dv &\textrm{Parametr.}\\
+        \Phi &= \iiint_V \div(\vvec) \ dV &\textbf{Satz\ v. Gauss} \\[0.125em]
+        \Phi &_{\textrm{nach aussen}} = - \Phi_{\textrm{nach innen}}
+    \end{align*} \vskip1pt
+    \textit{Hinweis: Richtung von $\novec$ beachten!}
+
+    \subsubsection{Satz von Gauss}
+        Falls $\vvec$ in ganz $B$ \textbf{definiert} und einmal \textbf{stetig differenzierbar} (\textit{regulär}) ist, gilt
+        $$
+            \iint_{\partial B} \vvec \cdot \novec \ dO = \iiint_B \div(\vvec) \ dV,
+        $$
+        wobei $\partial B$ die geschlossene Oberfläche des Volumens $B$ bezeichnet.
+        Der Normaleneinheitsvektor $\novec$ auf $\partial B$ zeigt von innen nach aussen.

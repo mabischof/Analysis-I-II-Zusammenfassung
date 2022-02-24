@@ -1,0 +1,41 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Euler DGL}
+    \subsubsection{Homogen}\label{sec:Euler-homogen}
+        \vspace{0.5em}
+        \mathbox{
+            a_n x^n y^{(n)} + \cdots + a_2 x^2 y'' + a_1 x y' + a_0 y = 0
+        }
+        \begin{enumerate}
+            \item Ansatz \fbox{$y=x^\alpha$} einsetzen $\to$ \textbf{Indexpolynom}
+            \item Nullstellen $\alpha_i$ des Indexpolynom bestimmen
+            \begin{itemize}
+                \item $\alpha_1 \neq \alpha_2 \neq \cdots$, reell
+                    $$
+                        y = C_1 x^{\alpha_1} + C_2 x^{\alpha_2} + C_3 x^{\alpha_3}+ \cdots
+                    $$
+                \item $\alpha_1 = \alpha_2 = \cdots$, reell
+                    $$
+                        y = C_1 x^{\alpha_1} + C_2 {\color{magenta} \ln(x)} x^{\alpha_2} + C_3 {\color{magenta} \ln(x)^2} x^{\alpha_3} + \cdots
+                    $$
+                \item $\alpha_{1,2} = \alpha_{3,4} = \cdots = {\color{red}a} \pm i {\color{blue}b}$
+                    \begin{align*}
+                        y =\phantom{\ln} &x^{{\color{red}a}} (C_1 \cos({\color{blue}b} \ln(x)) + C_2 \sin({\color{blue}b} \ln(x))) +\\
+                            {\color{magenta} \ln(x)}&x^{{\color{red}a}} (C_3 \cos({\color{blue}b} \ln(x)) + C_4 \sin({\color{blue}b} \ln(x)))+\\
+                            {\color{magenta} \ln(x)^2}&x^{{\color{red}a}} (C_5 \cos({\color{blue}b} \ln(x)) + C_6 \sin({\color{blue}b} \ln(x)))+ \cdots
+                    \end{align*}
+            \end{itemize}
+        \end{enumerate}
+    \subsubsection{Inhomogen}
+        \vspace{0.5em}
+        \mathbox{
+            a_n x^n y^{(n)} + \cdots + a_2 x^2 y'' + a_1 x y' + a_0 y = q(x)
+        }
+        \begin{enumerate}
+            \item Homogene Lösung $y_h$ bestimmen (\ref{sec:Euler-homogen})
+            \item Partikuläre Lösung $y_p$
+            \begin{itemize}
+                \item Ansatz (\ref{sec:1.Ord-homogen})\\
+                      Ansatz klappt nicht $\to$ mit $\ln(x)$ multiplizieren
+                \item Lagrange-Methode (\ref{sec:Lagrange-2-Ordnung})
+            \end{itemize}
+        \end{enumerate}

@@ -1,0 +1,44 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Tangentialebenen} \vspace{3pt}
+    \subsubsection{Linearisierungsformel}
+        \vspace{3pt}
+        
+        Tangentialebene an die Fläche: $z = f(x,y) $ im Punkt $P_o = (x_o, y_o, z_o)$ \\[5pt]  
+        \textit{mit:}
+        \mathbox{
+            z = f(x_o,y_o) + f_x(x_o,y_o) (x\!-\!x_o) + f_y(x_o,y_o)(y\!-\!y_o)
+        }
+        \begin{enumerate}
+            \item Wert für $f(x_o, y_o)$ finden
+            \item $f_x$ bilden und $(x_o, y_o)$ einsetzen
+            \item analog mit $f_y$ 
+            \item Das ganze in der obigen Form zusammensetzen
+        \end{enumerate}
+        \vspace{5pt}
+        
+        \textit{mit:}
+        \mathbox{
+            0 = f_x(x_o,y_o,z_o)(x\!-\!x_o) + f_y(x_o,y_o,z_o)(y\!-\!y_o) + ...}
+        \begin{enumerate}
+            \item $f(x,y) \rightarrow \Tilde{f}(x,y,z)$  durch Subtraktion von z 
+            \item $\Tilde{f}_x$ bilden und $(x_o, y_o, z_o)$ einsetzen
+            \item analog für $\Tilde{f}_y$ und $\Tilde{f}_z$ wobei meist: $f_z = -1$
+            \item Das ganze in der obigen Form zusammensetzen
+        \end{enumerate}
+        
+          
+        
+    \subsubsection{Gradient} \label{sec:Gradient}
+        \begin{itemize}
+            \item $f(x,y,z) = C$ ist eine Niveaufläche
+            \item $\grad(f)$ steht senkrecht auf Niveauflächen. ($\to \nvec$ )
+            \item Gradient bilden und Koordinatenwerte des Punktes $P_o = (x_o,y_o,z_o)$ einsetzen.
+            $$ \grad\left((f(x_o, y_o, z_o) \right) \!=\! \begin{pmatrix} f_x(x_o, y_o, z_o) \\ f_y(x_o, y_o, z_o) \\ f_z(x_o, y_o, z_o) \end{pmatrix} \! \Rightarrow \nvec \!= \!\begin{pmatrix} A \\ B \\ C \end{pmatrix}$$
+            \item Ebene mit Normalenvektor $\nvec = (A,B,C)^T$:
+            $$
+                Ax + By + Cz = D
+            $$
+        \end{itemize}
+        
+        
+    

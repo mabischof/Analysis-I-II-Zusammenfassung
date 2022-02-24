@@ -1,0 +1,27 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Taylorreihen}
+    Taylorentwicklung von $f(x)$ um $x_o$:
+    \mathbox{
+        f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(x_o)}{n!} (x-x_o)^n
+    }
+    \begin{itemize}
+    \item ungerade Fkt $\Leftrightarrow$ ungerade Indizes: $a_1x + a_3x^3 + \dots$
+    \item gerade Fkt $\Leftrightarrow$ gerade Indizes: $a_0 + a_2x^2 + \dots$
+    \end{itemize}
+    
+    \vspace{3pt}
+    
+    \subsubsection{Taylorriehenentwicklung einer DGL}
+    \vspace{3pt}
+    \fcolorbox{black}{white}{\parbox{0.95\linewidth}{Es existiert höchstens eine Potenzreihe von $f$ um $x_o$. \\ $\Rightarrow$ lässt sich eine Taylorreihe bilden, so entspricht sie der Potenzreihe der Funktion an der Stelle $x_o$}} \vspace{3pt}
+    
+    \textit{gegeben: DGL, Anfangsbedingung \\ gesucht: Potenzreihenentwicklung um $x_o$, n Koeff. }
+    \begin{enumerate}
+        \item die ersten $(n-1)$ Ableitungen bilden, keine Terme höher als $x^n$ 
+        $$y(x) = a_o + a_1x + a_2x^2 + a_3x^3 + ... $$
+        $$y'(x) = a_1 + 2a_2x + 3a_3x^2 + ... $$
+        $$ y''(x) = 2a_2 +  6 a_3x + 12a_4x^2 + ...$$
+        \item Anfangsbedingung einsetzen und Werte für $y, y', y'', ...$ finden 
+        \item Werte in die allgemeine Form einsetzen: 
+        $$y(x) = y(x_o) + \frac{y'(x_o)}{1!}(x-x_o) + \frac{y''(x_o}{2!}(x-x_o)^2 + ... $$
+    \end{enumerate}

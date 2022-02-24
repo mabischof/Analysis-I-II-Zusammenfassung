@@ -1,0 +1,54 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Lineare DGL n. Ordnung - konst. Koeff.}
+    \subsubsection{Homogen}\label{sec:konst-koeff-homogen}
+        \vspace{0.5em}
+        \mathbox{
+            a_n y^{(n)} + \cdots + a_2 y'' + a_1 y' + a_0 y = 0
+        }
+        \begin{enumerate}
+            \item Ansatz \fbox{$y=e^{\lambda x}$} einsetzen $\to$ \textbf{char. Polynom}
+            \item Nullstellen $\lambda_i$ des char. Polynom bestimmen
+            \begin{itemize}
+                \item $\lambda_1 \neq \lambda_2 \neq \cdots$, reell
+                    $$
+                        y = C_1 e^{\lambda_1 x} + C_2 e^{\lambda_2 x} + C_3 e^{\lambda_3 x}+ \cdots
+                    $$
+                \item $\lambda_1 = \lambda_2 = \cdots$, reell
+                    $$
+                        y = C_1 e^{\lambda_1 x} + C_2 {\color{magenta} x} e^{\lambda_2 x} + C_3 {\color{magenta} x^2} e^{\lambda_3 x} + \cdots
+                    $$
+                \item $\lambda_{1,2} = \lambda_{3,4} = \cdots = {\color{red}a} \pm i {\color{blue}b}$
+                    \begin{align*}
+                        y =\phantom{x} &e^{{\color{red}a}x} (C_1 \cos({\color{blue}b}x) + C_2 \sin({\color{blue}b}x)) +\\
+                            {\color{magenta} x}&e^{{\color{red}a}x} (C_3 \cos({\color{blue}b}x) + C_4 \sin({\color{blue}b}x))+\\
+                            {\color{magenta} x^2}&e^{{\color{red}a}x} (C_5 \cos({\color{blue}b}x) + C_6 \sin({\color{blue}b}x))+ \cdots
+                    \end{align*}
+            \end{itemize}
+        \end{enumerate}
+        \vspace{3pt}
+        \small{\textit{Hinweis: damit das Verhalten der Lösungen für $x \to \infty$ beschränkt bleibt, müssen reelle Nullstellen $\leq 0$ sein und komplexe Nullstellen einen Realteil $=0$ aufweisen.}
+        $$ n_{1,2} = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}$$
+        Für die Diskriminante $D = b^2 -4ac$ gilt: 
+        \begin{align*}
+            \textrm{falls} & & \textrm{dann muss:} \\
+            D > 0 & \hspace{6pt} \textrm{zwei ungleiche, reelle NS} & b \geq \sqrt{D} \\
+            D = 0 & \hspace{6pt}  n_1 = n_2 \in \mathbb{R} & -\frac{b}{2a} \leq 0 \\
+            D < 0 & \hspace{6pt}  \textrm{zwei komplexe NS} & b = 0 
+        \end{align*}
+        \textit{Damit die Beschränktheit erhalten bleibt. \vspace{2pt}\\
+        Für die 3 Fälle durch die Bedingungen (rechts) das Intervall für x herausfinden, Randstellen separat prüfen. \\ 
+        $\rightarrow$ Lösung ist Schnittbereich der Intervalle }}
+    \subsubsection{Inhomogen}
+        \vspace{0.5em}
+        \mathbox{
+            a_n y^{(n)} + \cdots + a_2 y'' + a_1 y' + a_0 y = q(x)
+        }
+        \begin{enumerate}
+            \item Homogene Lösung $y_h$ bestimmen (\ref{sec:konst-koeff-homogen})
+            \item Partikuläre Lösung $y_p$
+            \begin{itemize}
+                \item Ansatz wie gewohnt (\ref{sec:1.Ord-homogen})\\
+                      Ansatz klappt nicht $\to$ mit $x$ multiplizieren
+                \item Lagrange-Methode (\ref{sec:Lagrange-2-Ordnung})
+            \end{itemize}
+        \end{enumerate}

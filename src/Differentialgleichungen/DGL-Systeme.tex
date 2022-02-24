@@ -1,0 +1,187 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{DGL Systeme}
+    \vspace{0.5em}
+    \begin{minipage}{0.5\linewidth}
+        \centering
+        \textbf{Allgemein:}
+        \begin{align*}
+            y_1'(x) &= f_1(x,y_1,y_2)\\
+            y_2'(x) &= f_2(x,y_1,y_2)
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \centering
+        \textbf{Autonom:}
+        \begin{align*}
+            y_1'(x) &= f_1(y_1,y_2)\\
+            y_2'(x) &= f_2(y_1,y_2)
+        \end{align*}
+    \end{minipage}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Ein DGL System heisst \textbf{autonom}, falls die zu den gesuchten Funktionen ($y_1, y_2$) gehörige Variable ($x$) nicht explizit vorkommt.
+    \end{itemize}
+
+    \subsubsection{Existenz- \& Eindeutigkeitssatz}
+        Die Funktionen $f_1,f_2$ seien \textbf{stetig in $\boldsymbol{x}$} und \textbf{stetig partiell nach $\boldsymbol{y_1,y_2}$ differenzierbar}.
+        \begin{itemize}
+            \item[$\Rightarrow$] Zu vorgegebenem $x_o, y_{1,o}, y_{2,o}$ gibt es \textit{genau ein Paar} $f_1,f_2$, welches das System löst und das AWP $y_1(x_o) = y_{1,o}$ und $y_2(x_o) = y_{2,o}$ erfüllt.
+        \end{itemize}
+    \subsubsection{Lineare Autonome DGL Systeme mit konstanten Koeffizienten}
+        \vspace{-0.5em}
+        $$
+            \dot{x} = A \cdot x + b
+        $$
+        \vspace{0em}
+        $$
+            \underbrace{\begin{pmatrix}
+                \dot{x}_1\\ \dot{x}_2
+            \end{pmatrix}}_{\dot{x}}
+            =
+            \underbrace{\begin{bmatrix}
+                a_{11} & a_{12}\\ a_{21} & a_{22}
+            \end{bmatrix}}_{A}
+            \cdot
+            \underbrace{\begin{pmatrix}
+                x_1\\ x_2
+            \end{pmatrix}}_{x}
+            +
+            \underbrace{\begin{pmatrix}
+                b_1\\ b_2
+            \end{pmatrix}}_{b}
+        $$
+    \begin{itemize}
+        \item \textbf{Eliminationsverfahren}
+            \begin{enumerate}
+                \item Nach einer gesuchten Funktion auflösen, ableiten und einsetzen
+                \item DGL 2. Ordnung lösen
+                \item Zweite gesuchte Funktion bestimmen
+            \end{enumerate}
+        \item \textbf{Linalg-Methode}
+            \begin{enumerate}
+                \item Eigenwerte $\lambda_i$ (EW) bestimmen
+                    $$
+                        0 \overset{!}{=} \det (A - \lambda \mathbb{I})
+                    $$
+                \item Eigenvektoren $\vvec_i$ zu EW $\lambda_i$ bestimmen
+                    $$
+                        (A - \lambda_i \mathbb{I}) \cdot \vvec_i \overset{!}{=} 0
+                    $$
+                \item Lösung Konstruieren:
+                \begin{itemize}
+                    \item $\lambda_{1,2}$ reell
+                        \mathbox{
+                            \begin{pmatrix}
+                                x\\y
+                            \end{pmatrix}
+                            = 
+                            C_1 \cdot \vvec_1 \cdot e^{\lambda_1 t}
+                            +
+                            C_2 \cdot \vvec_2 \cdot e^{\lambda_2 t}
+                        }
+                    \item $\lambda_{1,2} = a \pm ib$ 
+                        $$
+                            \lambda_{1} = a + ib \quad \to \quad \vvec_1 =
+                            \begin{pmatrix}
+                                c\\id
+                            \end{pmatrix}
+                        $$
+                        $$
+                            w = 
+                            \vvec_1 \cdot e^{\lambda_1 t}
+                            =
+                            \begin{pmatrix}
+                                c\\id
+                            \end{pmatrix}
+                            e^{(a+ib)t}
+                        $$
+                        \mathbox{
+                            \begin{pmatrix}
+                                x\\y
+                            \end{pmatrix}
+                            = 
+                            C_1 \cdot \textrm{Re}(\wvec)
+                            +
+                            C_2 \cdot \textrm{Im}(\wvec)
+                        }
+
+                \end{itemize}
+
+            \end{enumerate}
+            
+
+    \end{itemize}
+    
+    \subsubsection{Gleichgewichtspunkte (GGWP)}
+        $$
+            \begin{pmatrix}
+                \dot{x}\\ \dot{y}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                f_1(x,y)\\ f_2(x,y)
+            \end{pmatrix}
+            \overset{!}{=} 
+            \begin{pmatrix}
+                0\\0
+            \end{pmatrix}
+        $$
+    \subsubsection{Stabilitätsverhalten}
+        \vspace{-1em}
+        \begin{align*}
+            \dot{x} = f_1(x,y)\\
+            \dot{y} = f_2(x,y)
+        \end{align*}
+        \vspace{-0.75em}
+        \begin{enumerate}
+            \item Falls nötig um GGWP $(x_o,y_o)$ linearisieren:
+                  $$
+                    \begin{pmatrix}
+                        \dot{\xi}\\[0.5em] \dot{\eta}
+                    \end{pmatrix}
+                    =
+                    \underbrace{\begin{bmatrix}
+                        \frac{\partial f_1}{\partial x}(x_o, y_o) & \frac{\partial f_1}{\partial y}(x_o, y_o)\\[0.5em]
+                        \frac{\partial f_2}{\partial x}(x_o, y_o) & \frac{\partial f_2}{\partial y}(x_o, y_o)
+                    \end{bmatrix}}_{A}
+                    \cdot 
+                    \begin{pmatrix}
+                        \xi\\[0.5em] \eta
+                    \end{pmatrix}
+                  $$
+            \item Eigenwerte $\lambda_i$ von $A$ bestimmen
+            \begin{itemize}
+                \item Re$(\lambda_i) < 0, \ \forall i \quad \to $ \textit{asymptotisch stabil}
+                \item Re$(\lambda_i) \leq 0, \ \forall i \quad \to $ \textit{stabil}
+                \item Re$(\lambda_i) > 0, \ \exists i \quad \to $ \textit{instabil}
+            \end{itemize}
+        \end{enumerate}
+    \subsubsection{Phasenportrait}
+        Die Feldlinien des Vektorfeldes $\vvec$ beschreiben die Lösungskurven des \textit{autonomen} DGL Systems.
+        $$
+            \vvec =
+            \begin{pmatrix}
+                \dot{x}\\ \dot{y}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                f_1(x,y)\\f_2(x,y)
+            \end{pmatrix}
+            = 
+            \begin{pmatrix}
+                 v_1 \\ v_2   
+            \end{pmatrix}
+        $$
+        \vspace{0.5em}
+        Bilde die neue DGL $y_{pp}'$ und löse sie auf:
+        $$
+            y_{pp}' = \frac{v_2}{v_1}
+        $$  
+        Für den Durchlaufsinn einige Punkte in das System einsetzen. Quadranten, Polstellen etc. einzeln prüfen.
+        \begin{align*}
+            \dot{x} > 0 & \Rightarrow \textrm{zeigt nach rechts} \\
+            \dot{y} > 0 & \Rightarrow \textrm{zeigt nach oben}
+        \end{align*}
+        
+    \subsubsection{Einige wichtige Portraits:}
+    
